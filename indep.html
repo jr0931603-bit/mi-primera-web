@@ -1,0 +1,37 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>WikiCasas</title>
+    <link rel="stylesheet" href="estilos.css"> </head>
+<body>
+
+    <button onclick="toggleModoOscuro()">Cambiar Modo</button>
+
+    <input type="text" id="searchBar" onkeyup="buscarCasas()" placeholder="Buscar por título o ubicación...">
+
+    <div id="contenedor-casas">
+        <div class="casa-card">
+            <h3 class="casa-titulo">Casa Colonial del Centro</h3>
+            <p class="casa-ubicacion">Oaxaca, México</p>
+        </div>
+        <div class="casa-card">
+            <h3 class="casa-titulo">Apartamento Moderno Loft</h3>
+            <p class="casa-ubicacion">Medellín, Colombia</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="calculadora">
+        <h3>Simulador de Hipoteca WikiCasas</h3>
+        <input type="number" id="hipoteca-precio" placeholder="Precio de la casa ($)">
+        <input type="number" id="hipoteca-interes" placeholder="Interés anual (%)" step="0.1">
+        <input type="number" id="hipoteca-plazo" placeholder="Plazo en años">
+        <button onclick="calcularHipoteca()">Calcular</button>
+        <p id="hipoteca-resultado"></p>
+    </div>
+
+    <script src="wikicasas.js"></script>
+</body>
+</html>
